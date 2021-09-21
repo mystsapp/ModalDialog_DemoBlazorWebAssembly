@@ -1,13 +1,26 @@
 ﻿@page "/"
+@using MyComponents;
+@using Models;
+@inject IJSRuntime js
 
-<Dialog Show="showDialog"
-        OnCancel="DialogCancelHandler"
-        OnOk="DialogOkHandler">
+@if (windowSize.Width != null)
+{
+    <h2>
+        Window Size: @windowSize.Width x @windowSize.Height
+    </h2>
+}
+<button @onclick="GetWindowSize">Get Window Size</button>
+
+<Document Title="Home - My App" />
+
+<BweDialog Show="showDialog"
+           OnCancel="DialogCancelHandler"
+           OnOk="DialogOkHandler">
     <Title> Quick List [@(Items.Count + 1)]</Title>
     <Body>
         Enter New Item: <input @bind="NewItem" />
     </Body>
-</Dialog>
+</BweDialog>
 
 <ol>
     @foreach (var item in Items)
@@ -18,6 +31,13 @@
 
 <button @onclick="OpenDialog">Show Dialog</button>
 @code {
+    private WindowSize windowSize = new WindowSize();
+
+    private async Task GetWindowSize()
+    {
+        windowSize = await js.InvokeAsync<WindowSize>("bweInterop.getWindowSize"); // ham bweInterop.getWindowSize ben bweInterop.js
+    }
+
     private string NewItem;
     private List<string> Items = new List<string>();
 
