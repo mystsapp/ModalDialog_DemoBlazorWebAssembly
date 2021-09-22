@@ -9,6 +9,7 @@
 </div>
 <div class="pt-2">
     <button class="btn btn-primary" @onclick="SaveToLocalStorageAsync"> Save to Local Storage</button>
+    <button class="btn btn-primary" @onclick="ReadFromLocalStorageAsync"> Read from Local Storage</button>
 </div>
 
 @code {
@@ -23,6 +24,11 @@
     async Task SaveToLocalStorageAsync()
     {
         await localStorage.SetItemAsync<string>("localStorageData", data);
+    }
+
+    async Task ReadFromLocalStorageAsync()
+    {
+        data = await localStorage.GetItemAsync<string>("localStorageData");
     }
 
 }
