@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModalDialog", "ModalDialog\ModalDialog.csproj", "{2DFDBA4C-D968-40D4-8B37-64B3489C84F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyComponents", "MyComponents\MyComponents.csproj", "{6A76D97C-B1E3-4E6D-BA81-C7AB1F1AE350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyComponents", "MyComponents\MyComponents.csproj", "{6A76D97C-B1E3-4E6D-BA81-C7AB1F1AE350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalStorage", "LocalStorage\LocalStorage.csproj", "{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6A76D97C-B1E3-4E6D-BA81-C7AB1F1AE350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A76D97C-B1E3-4E6D-BA81-C7AB1F1AE350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A76D97C-B1E3-4E6D-BA81-C7AB1F1AE350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

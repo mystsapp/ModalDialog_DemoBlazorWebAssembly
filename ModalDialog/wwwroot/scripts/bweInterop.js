@@ -10,3 +10,15 @@ bweInterop.getWindowSize = function () {
     }
     return size;
 }
+
+bweInterop.registerResizeHangler = function (dotNetObjectRef) {
+    function resizeHandler() {
+        dotNetObjectRef.invokMethodAsynce('GetWindowSize', {
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    }
+
+    resizeHandler();
+    window.addEventListener("resize", resizeHandler);
+}
