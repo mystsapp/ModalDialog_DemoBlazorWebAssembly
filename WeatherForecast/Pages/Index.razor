@@ -1,6 +1,8 @@
 ﻿@page "/"
 @using WeatherForecast.Models;
+@using System.Text;
 @inject IJSRuntime js;
+@inject HttpClient Http
 
 @if (pos == null)
 {
@@ -11,7 +13,27 @@ else
     <h2>Latitude: @pos.Latitude, Longitude: @pos.Longitude</h2>
 }
 
+@*@if (forecast == null)
+    {
+        <p><em>@message</em></p>
+    }
+    else
+    {
+        <div class="card-group">
+            @foreach (var item in forecast.Daily.Take(5))
+            {
+                <DailyForecast Seconds="@item.Dt"
+                               LowTemp="@item.Temp.Min"
+                               HighTemp="@item.Temp.Max"
+                               Description="@item.Weather[0].Description"
+                               Icon="@item.Weather[0].Icon"></DailyForecast>
+            }
+        </div>
+    }*@
+
 @code {
+    OpenWeather forecast;
+
     string message = "Loading...";
     Position pos;
 
@@ -19,12 +41,13 @@ else
     {
         try
         {
+            await GetForecast();
             await GetPosition();
         }
         catch (Exception)
         {
 
-            message = "Geolocation is not supported.";
+            message = "Error encountered";
         };
     }
 
@@ -32,4 +55,26 @@ else
     {
         pos = await js.InvokeAsync<Position>("bweInterop.getPosition");
     }
+
+    private async Task GetForecast()
+    {
+        string APIKey = "{79df7639c623106f4e2dd142400f257d}"; // { Your_API_Key} : https://home.openweathermap.org/api_keys
+
+        StringBuilder url = new StringBuilder();
+
+        url.Append("https://api.openweathermap.org");
+        url.Append("/data/2.5/onecall?");
+        url.Append("lat=");
+        url.Append(pos.Latitude);
+        url.Append("&lon=");
+        url.Append(pos.Longitude);
+        url.Append("&exclude=");
+        url.Append("current,minutely,hourly,alerts");
+        url.Append("&units=imperial");
+        url.Append("&appid=");
+        url.Append(APIKey);
+
+        forecast = await Http.GetFromJsonAsync<OpenWeather>(url.ToString());
+    }
+
 }

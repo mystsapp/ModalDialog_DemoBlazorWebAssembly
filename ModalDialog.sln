@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyComponents", "MyComponent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalStorage", "LocalStorage\LocalStorage.csproj", "{5C21BAA5-AB31-4921-9D6D-6F43DB2D0087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{1EB1A7DF-C464-4873-A359-28019E1E8671}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{1EB1A7DF-C464-4873-A359-28019E1E8671}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
