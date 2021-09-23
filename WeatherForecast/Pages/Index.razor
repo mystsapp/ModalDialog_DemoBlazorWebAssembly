@@ -13,23 +13,24 @@ else
     <h2>Latitude: @pos.Latitude, Longitude: @pos.Longitude</h2>
 }
 
-@*@if (forecast == null)
-    {
-        <p><em>@message</em></p>
-    }
-    else
-    {
-        <div class="card-group">
-            @foreach (var item in forecast.Daily.Take(5))
-            {
-                <DailyForecast Seconds="@item.Dt"
-                               LowTemp="@item.Temp.Min"
-                               HighTemp="@item.Temp.Max"
-                               Description="@item.Weather[0].Description"
-                               Icon="@item.Weather[0].Icon"></DailyForecast>
-            }
-        </div>
-    }*@
+@if (forecast == null)
+{
+    <p><em>@message</em></p>
+}
+else
+{
+    <div class="card-group">
+        @foreach (var item in forecast.Daily.Take(5))
+        {
+            @*<h4>@forecast.Timezone</h4>*@
+            <DailyForecast Seconds="@item.Dt"
+                           LowTemp="@item.Temp.Min"
+                           HighTemp="@item.Temp.Max"
+                           Description="@item.Weather[0].Description"
+                           Icon="@item.Weather[0].Icon"></DailyForecast>
+        }
+    </div>
+}
 
 @code {
     OpenWeather forecast;
@@ -41,8 +42,9 @@ else
     {
         try
         {
-            await GetForecast();
             await GetPosition();
+            await GetForecast();
+
         }
         catch (Exception)
         {
@@ -58,9 +60,9 @@ else
 
     private async Task GetForecast()
     {
-        string APIKey = "{79df7639c623106f4e2dd142400f257d}"; // { Your_API_Key} : https://home.openweathermap.org/api_keys
+        string APIKey = "79df7639c623106f4e2dd142400f257d"; // { Your_API_Key} : https://home.openweathermap.org/api_keys
 
-        StringBuilder url = new StringBuilder();
+        StringBuilder url = new StringBuilder(); // https://api.openweathermap.org/data/2.5/onecall?lat=10.784898&lon=106.6171859&exclude=current,minutely,hourly,alerts&units=imperial&appid=79df7639c623106f4e2dd142400f257d
 
         url.Append("https://api.openweathermap.org");
         url.Append("/data/2.5/onecall?");

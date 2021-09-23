@@ -7,7 +7,9 @@ namespace WeatherForecast.Models
 {
     public class OpenWeather
     {
+        public string Timezone { get; set; }
         public Daily[] Daily { get; set; }
+        
     }
 
     public class Daily

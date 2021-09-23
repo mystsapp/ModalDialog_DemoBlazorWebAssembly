@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon"
+          sizes="512x512"
+          href="Sun-512.png" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>WeatherForecast</title>
@@ -12,6 +17,10 @@
 </head>
 
 <body>
+    <script>
+        navigator.serviceWorker.register('service-worker.js');
+    </script>
+
     <div id="app">Loading...</div>
 
     <div id="blazor-error-ui">
