@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalStorage", "LocalStorag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{1EB1A7DF-C464-4873-A359-28019E1E8671}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart", "ShoppingCart\ShoppingCart.csproj", "{4368F735-51B6-4075-AEA8-6EC478610032}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1EB1A7DF-C464-4873-A359-28019E1E8671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EB1A7DF-C464-4873-A359-28019E1E8671}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EB1A7DF-C464-4873-A359-28019E1E8671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4368F735-51B6-4075-AEA8-6EC478610032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4368F735-51B6-4075-AEA8-6EC478610032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4368F735-51B6-4075-AEA8-6EC478610032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4368F735-51B6-4075-AEA8-6EC478610032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
