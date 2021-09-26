@@ -27,11 +27,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5", "5", "{A4F7C1C5-F1C3-4A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.TaskManager", "6.TaskManager", "{15AC6DBC-6418-44FC-80CB-ED6F21277506}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManger.Server", "TaskManger\Server\TaskManger.Server.csproj", "{72FFA7F0-573A-4265-9E6D-7EE15A4DAB2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManger.Server", "TaskManger\Server\TaskManger.Server.csproj", "{72FFA7F0-573A-4265-9E6D-7EE15A4DAB2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManger.Client", "TaskManger\Client\TaskManger.Client.csproj", "{F2B10337-F1EA-4CB8-B1A7-8FAB1BE7D7FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManger.Client", "TaskManger\Client\TaskManger.Client.csproj", "{F2B10337-F1EA-4CB8-B1A7-8FAB1BE7D7FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManger.Shared", "TaskManger\Shared\TaskManger.Shared.csproj", "{3E8D03BE-6762-4F22-80C2-17C4249ECF74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManger.Shared", "TaskManger\Shared\TaskManger.Shared.csproj", "{3E8D03BE-6762-4F22-80C2-17C4249ECF74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.ExpenseTracker", "7.ExpenseTracker", "{BD774175-024B-4A4B-818F-F592E54E3D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Server", "ExpenseTracker\Server\ExpenseTracker.Server.csproj", "{0D1C832C-994F-49AE-B5AF-F80AF2B12907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Client", "ExpenseTracker\Client\ExpenseTracker.Client.csproj", "{AF6CFA45-27C1-49ED-8453-2139CAE809CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker.Shared", "ExpenseTracker\Shared\ExpenseTracker.Shared.csproj", "{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +83,18 @@ Global
 		{3E8D03BE-6762-4F22-80C2-17C4249ECF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E8D03BE-6762-4F22-80C2-17C4249ECF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E8D03BE-6762-4F22-80C2-17C4249ECF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1C832C-994F-49AE-B5AF-F80AF2B12907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1C832C-994F-49AE-B5AF-F80AF2B12907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1C832C-994F-49AE-B5AF-F80AF2B12907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1C832C-994F-49AE-B5AF-F80AF2B12907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6CFA45-27C1-49ED-8453-2139CAE809CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6CFA45-27C1-49ED-8453-2139CAE809CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6CFA45-27C1-49ED-8453-2139CAE809CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6CFA45-27C1-49ED-8453-2139CAE809CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +109,9 @@ Global
 		{72FFA7F0-573A-4265-9E6D-7EE15A4DAB2F} = {15AC6DBC-6418-44FC-80CB-ED6F21277506}
 		{F2B10337-F1EA-4CB8-B1A7-8FAB1BE7D7FA} = {15AC6DBC-6418-44FC-80CB-ED6F21277506}
 		{3E8D03BE-6762-4F22-80C2-17C4249ECF74} = {15AC6DBC-6418-44FC-80CB-ED6F21277506}
+		{0D1C832C-994F-49AE-B5AF-F80AF2B12907} = {BD774175-024B-4A4B-818F-F592E54E3D74}
+		{AF6CFA45-27C1-49ED-8453-2139CAE809CD} = {BD774175-024B-4A4B-818F-F592E54E3D74}
+		{8041EC2E-A33F-4BF8-B4D4-51DD08EFD6C7} = {BD774175-024B-4A4B-818F-F592E54E3D74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC2F4630-18F3-4649-BA09-3F20E498C810}
